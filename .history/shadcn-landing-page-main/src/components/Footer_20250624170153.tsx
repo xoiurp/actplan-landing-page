@@ -1,5 +1,5 @@
-import { LogoIcon } from "./Icons";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { LogoActplan } from "./LogoActplan";
+import { MapPin } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -11,10 +11,9 @@ export const Footer = () => {
           <a
             rel="noreferrer noopener"
             href="/"
-            className="font-bold text-xl flex"
+            className="font-bold text-xl flex items-center gap-2"
           >
-            <LogoIcon />
-            ACTPlan
+            <LogoActplan className="h-8 text-primary" />
           </a>
           
           <div className="mt-4">
@@ -26,29 +25,7 @@ export const Footer = () => {
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Contato</h3>
-          <div className="flex items-center gap-2">
-            <Phone size={16} />
-            <a
-              rel="noreferrer noopener"
-              href="tel:+5516982056000"
-              className="opacity-60 hover:opacity-100"
-            >
-              (16) 98205-6000
-            </a>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <Mail size={16} />
-            <a
-              rel="noreferrer noopener"
-              href="mailto:olivia.tazawa@actplanconsultoria.com"
-              className="opacity-60 hover:opacity-100"
-            >
-              olivia.tazawa@actplanconsultoria.com
-            </a>
-          </div>
-
+          <h3 className="font-bold text-lg">Localização</h3>
           <div className="flex items-center gap-2">
             <MapPin size={16} />
             <span className="opacity-60">

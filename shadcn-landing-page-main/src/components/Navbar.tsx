@@ -14,7 +14,6 @@ import {
 
 import { Button, buttonVariants } from "./ui/button";
 import { Menu } from "lucide-react";
-import { ModeToggle } from "./mode-toggle";
 import { LogoActplan } from "./LogoActplan";
 
 interface RouteProps {
@@ -48,7 +47,7 @@ const routeList: RouteProps[] = [
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
-    <header className="sticky border-b-[0.5px] border-muted-foreground/20 top-0 z-40 w-full bg-white dark:bg-background">
+    <header className="sticky border-b-[0.5px] border-muted-foreground/20 top-0 z-40 w-full bg-white">
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container h-16 px-8 w-screen flex justify-between items-center">
           <NavigationMenuItem className="font-bold flex">
@@ -57,14 +56,12 @@ export const Navbar = () => {
               href="/"
               className="font-bold text-xl flex items-center gap-2"
             >
-              <LogoActplan className="h-8 text-primary dark:text-white" />
+              <LogoActplan className="h-8 text-primary" />
             </a>
           </NavigationMenuItem>
 
           {/* mobile */}
           <span className="flex md:hidden">
-            <ModeToggle />
-
             <Sheet
               open={isOpen}
               onOpenChange={setIsOpen}
@@ -81,7 +78,7 @@ export const Navbar = () => {
               <SheetContent side={"left"}>
                 <SheetHeader>
                   <SheetTitle className="font-bold text-xl flex items-center gap-2">
-                    <LogoActplan className="h-8 text-primary dark:text-white" />
+                    <LogoActplan className="h-8 text-primary" />
                   </SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-4">
@@ -122,7 +119,6 @@ export const Navbar = () => {
             <Button size="sm">
               Agendar Consultoria
             </Button>
-            <ModeToggle />
           </div>
         </NavigationMenuList>
       </NavigationMenu>

@@ -70,8 +70,8 @@ export const Features = () => {
         {featureList.map((feature: string) => (
           <div key={feature}>
             <Badge
-              variant="secondary"
               className="text-sm"
+              style={{ backgroundColor: "#2F2E44", color: "white" }}
             >
               {feature}
             </Badge>
@@ -81,20 +81,21 @@ export const Features = () => {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {features.map(({ title, description, image }: FeatureProps) => (
-          <Card key={title}>
-            <CardHeader>
-              <CardTitle>{title}</CardTitle>
-            </CardHeader>
-
-            <CardContent>{description}</CardContent>
-
-            <CardFooter>
+          <Card key={title} className="bg-muted/10 flex flex-col">
+            <CardHeader className="p-0">
               <img
                 src={image}
                 alt={`Benefício: ${title}`}
-                className="w-[200px] lg:w-[300px] mx-auto"
+                className="w-full h-48 object-cover rounded-t-lg"
               />
-            </CardFooter>
+            </CardHeader>
+            
+            <div className="p-6 flex flex-col flex-grow">
+              <CardTitle className="mb-2">{title}</CardTitle>
+              <CardContent className="p-0 flex-grow">
+                <p className="text-muted-foreground">{description}</p>
+              </CardContent>
+            </div>
           </Card>
         ))}
       </div>

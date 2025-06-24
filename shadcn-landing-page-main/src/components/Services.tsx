@@ -1,6 +1,5 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { FileText, Calculator, Scale, FileCheck, BarChart4, FileSearch } from "lucide-react";
-import cubeLeg from "../assets/cube-leg.png";
 
 interface ServiceProps {
   title: string;

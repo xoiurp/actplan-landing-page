@@ -7,8 +7,7 @@ import {
   TrendingUp, 
   Search, 
   Lightbulb, 
-  BarChart4, 
-  Target 
+  BarChart4
 } from "lucide-react";
 
 export const About = () => {

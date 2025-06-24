@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/sheet";
 
 import { Button, buttonVariants } from "./ui/button";
-import { Menu, Phone } from "lucide-react";
+import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
 import { LogoActplan } from "./LogoActplan";
 
@@ -57,11 +57,7 @@ export const Navbar = () => {
               href="/"
               className="font-bold text-xl flex items-center gap-2"
             >
-              <img 
-                src={logoActplanSvg} 
-                alt="ACTPlan Logo" 
-                className="h-8 text-primary dark:text-white"
-              />
+              <LogoActplan className="h-8 text-primary dark:text-white" />
             </a>
           </NavigationMenuItem>
 
@@ -85,11 +81,7 @@ export const Navbar = () => {
               <SheetContent side={"left"}>
                 <SheetHeader>
                   <SheetTitle className="font-bold text-xl flex items-center gap-2">
-                    <img 
-                      src={logoActplanSvg} 
-                      alt="ACTPlan Logo" 
-                      className="h-8 text-primary dark:text-white"
-                    />
+                    <LogoActplan className="h-8 text-primary dark:text-white" />
                   </SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-4">

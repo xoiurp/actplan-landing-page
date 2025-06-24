@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/sheet";
 
 import { Button, buttonVariants } from "./ui/button";
-import { Menu, Phone } from "lucide-react";
+import { Menu } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
 import { LogoActplan } from "./LogoActplan";
 

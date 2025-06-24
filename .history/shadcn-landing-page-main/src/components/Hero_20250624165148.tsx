@@ -1,5 +1,4 @@
 import { Button } from "./ui/button";
-import { buttonVariants } from "./ui/button";
 import { HeroCards } from "./HeroCards";
 import { Input } from "./ui/input";
 
@@ -42,7 +41,7 @@ export const Hero = () => {
       </div>
 
       {/* Hero cards sections */}
-      <div className="z-10 relative lg:max-w-[35%]">
+      <div className="z-10 relative lg:max-w-[55%]">
         <HeroCards />
       </div>
 

@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "E:/OST/Webscrapper/sistema_actplan/shadcn-landing-page-main/shadcn-landing-page-main"
+        
+      ]
+    },
+    "(figma-server)": {
+      "command": "node",
+      "args": [
+        "C:\\Users\/pichau\\AppData\\Roaming\\Roo-Code\\MCP\\figma-server\\build\\index.js"
+      ]
+    }
+  }
+}

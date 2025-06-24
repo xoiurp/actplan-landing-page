@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/pichau/Desktop",
+        "E:/OST/Webscrapper/project",
+        "E:/OST/Projeto/docker-browser-demo/ost_solver",
+        "C:/projetos",
+        "E:/OST/Webscrapper/sistema_actplan/sistema_actplan2/project"
+        
+      ]
+    },
+    "(figma-server)": {
+      "command": "node",
+      "args": [
+        "C:\\Users\/pichau\\AppData\\Roaming\\Roo-Code\\MCP\\figma-server\\build\\index.js"
+      ]
+    }
+  }
+}

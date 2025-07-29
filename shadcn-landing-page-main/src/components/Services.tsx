@@ -1,78 +1,81 @@
-import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { FileText, Calculator, Scale, FileCheck, BarChart4, FileSearch } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
+import { 
+  Calculator, 
+  Shield, 
+  TrendingUp, 
+  FileText, 
+  Scale, 
+  Users 
+} from "lucide-react";
 
-interface ServiceProps {
-  title: string;
-  description: string;
-  icon: JSX.Element;
-}
-
-const serviceList: ServiceProps[] = [
+const services = [
   {
+    icon: Calculator,
     title: "Planejamento Tributário",
-    description:
-      "Estratégias personalizadas para minimizar o pagamento de impostos de forma legal e segura. Análise detalhada da situação fiscal atual e oportunidades de otimização.",
-    icon: <FileText className="h-6 w-6 text-primary" />,
+    description: "Estratégias personalizadas para minimizar a carga tributária da sua empresa de forma legal e eficiente.",
   },
   {
+    icon: TrendingUp,
     title: "Recuperação de Créditos",
-    description:
-      "Identificação e recuperação de créditos tributários pagos indevidamente ou a maior. Análise de documentos fiscais e processos de restituição.",
-    icon: <FileCheck className="h-6 w-6 text-primary" />,
+    description: "Identificação e recuperação de créditos tributários pagos indevidamente ou não aproveitados.",
   },
   {
-    title: "Análise Fiscal",
-    description:
-      "Avaliação detalhada da situação fiscal da empresa para identificar oportunidades de economia e prevenir riscos tributários.",
-    icon: <Calculator className="h-6 w-6 text-primary" />,
+    icon: FileText,
+    title: "Consultoria Fiscal",
+    description: "Orientação especializada sobre questões tributárias complexas e adequação à legislação vigente.",
   },
   {
-    title: "Consultoria Tributária",
-    description:
-      "Orientação especializada sobre questões tributárias complexas e mudanças na legislação que impactam o seu negócio.",
-    icon: <BarChart4 className="h-6 w-6 text-primary" />,
+    icon: Scale,
+    title: "Defesa Tributária",
+    description: "Representação em processos administrativos e judiciais tributários com foco na resolução eficaz.",
   },
   {
-    title: "Due Diligence Tributária",
-    description:
-      "Análise aprofundada dos riscos e passivos tributários em processos de fusão e aquisição ou reestruturação empresarial.",
-    icon: <FileSearch className="h-6 w-6 text-primary" />,
+    icon: Shield,
+    title: "Compliance Tributário",
+    description: "Garantia de conformidade com todas as obrigações fiscais e acessórias da sua empresa.",
   },
   {
-    title: "Contencioso Tributário",
-    description:
-      "Defesa dos interesses da empresa em processos administrativos e judiciais tributários, com foco na redução de contingências.",
-    icon: <Scale className="h-6 w-6 text-primary" />,
+    icon: Users,
+    title: "Consultoria Empresarial",
+    description: "Suporte estratégico para tomada de decisões tributárias que impactem o crescimento do negócio.",
   },
 ];
 
 export const Services = () => {
   return (
-    <section id="services" className="container py-24 sm:py-32 bg-gradient-to-b from-white to-muted/30">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-primary">
-          Nossos Serviços
-        </h2>
-
-        <p className="text-muted-foreground text-xl mt-4 max-w-3xl mx-auto">
-          A ACTPlan tem ênfase na prestação de serviços de assessoria e consultoria tributária, prezando pelo enquadramento individual de cada empresa dentro do seu contexto contábil/financeiro.
+    <section id="services" className="container py-24 sm:py-32">
+      <div className="text-center">
+        <h2 className="text-3xl font-bold md:text-4xl">Nossos Serviços</h2>
+        <p className="mx-auto mt-4 max-w-3xl text-xl text-muted-foreground">
+          Oferecemos um portfólio completo de soluções tributárias para 
+          maximizar a eficiência fiscal da sua empresa e garantir total 
+          conformidade legal.
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {serviceList.map(({ icon, title, description }: ServiceProps) => (
-          <Card key={title} className="bg-white border-muted/50 shadow-sm hover:shadow-md transition-shadow">
-            <CardHeader className="pb-4">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="p-2 bg-muted/30 rounded-md">
-                  {icon}
-                </div>
-                <CardTitle className="text-lg font-semibold">{title}</CardTitle>
+      <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {services.map((service, index) => (
+          <Card
+            key={index}
+            className="group relative overflow-hidden border-0 bg-card/50 transition-all duration-300 hover:bg-card/80 hover:shadow-lg"
+          >
+            <CardHeader>
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                <service.icon className="h-6 w-6" />
               </div>
-              <CardDescription className="text-sm text-muted-foreground">
-                {description}
-              </CardDescription>
+              <CardTitle className="text-xl">{service.title}</CardTitle>
             </CardHeader>
+            <CardContent>
+              <CardDescription className="text-sm leading-relaxed">
+                {service.description}
+              </CardDescription>
+            </CardContent>
           </Card>
         ))}
       </div>

@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "@measured/puck": "^0.18.3"
+    "@measured/puck": "^0.18.3",
+    "embla-carousel-react": "^8.6.0"
   }
 }

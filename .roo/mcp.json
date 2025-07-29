@@ -6,6 +6,10 @@
         "-y",
         "@modelcontextprotocol/server-filesystem",
         "E:/OST/Webscrapper/sistema_actplan/shadcn-landing-page-main/shadcn-landing-page-main"
+      ],
+      "alwaysAllow": [
+        "write_file",
+        "list_allowed_directories"
       ]
     },
     "(figma-server)": {
@@ -17,7 +21,8 @@
         "get_images",
         "get_file",
         "list_components"
-      ]
+      ],
+      "disabled": true
     }
   }
 }
